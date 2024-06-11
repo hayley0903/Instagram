@@ -16,6 +16,7 @@
   --box-bg: #151515;
   --box-border-color: #262626;
   --txt-color: #d2d2d2;
+  --a-color: #d2d2d2;
 }
 
 body {
@@ -60,6 +61,7 @@ a {
   width: 100%;
 }
 
+
 .userid input{
   border: 1px solid var(--box-border-color);
   width: 100%;
@@ -67,6 +69,7 @@ a {
   margin-bottom: 10px;
   box-sizing: border-box;
 }
+
 .password input {
   border: 1px solid var(--box-border-color);
   width: 100%;
@@ -75,6 +78,17 @@ a {
   box-sizing: border-box;
   position: relative;
 }
+
+.placeholder1 {
+  position: absolute;
+  top: 200px;
+  left: 300px;
+}
+
+.placeholder2 {
+  position: absolute;
+}
+
 
 .pwshow{
   display: none;
@@ -139,10 +153,6 @@ a {
   margin: 10px;
 }
 
-.list button {
-  border:none;
-  outline: none;
-  background-color: transparent;
-  font-size: 16px;
+.mode-btn {
+  cursor: pointer;
 }
-
