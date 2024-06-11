@@ -1,0 +1,138 @@
+/* 사용자 지정 css 속성 */
+:root {
+  --body-bg: #fafafa;
+  --box-bg: #fff;
+  --box-border-color: #dbdbdb;
+  --txt-color: #262626;
+  --txt-second-color: #8e8e8e;
+  --btn-bg: #0095f6;
+  --btn-color: #fff;
+  --fb-color: #385185;
+  --a-color: #00376b;
+}
+
+.dark {
+  --body-bg: #151515;
+  --box-bg: #151515;
+  --box-border-color: #262626;
+  --txt-color: #d2d2d2;
+}
+
+
+
+a {
+  color: var(--a-color);
+  text-decoration: none;}
+
+.wrapper {
+  background-color: var(--body-bg);
+  color: var(--txt-color);
+}
+
+.section1 {
+  padding: 20px 0;
+  border: 1px solid var(--box-border-color);
+  width: 40%;
+  margin: 50px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+
+.logo img {
+  width: 50%;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 70%;
+  }
+  
+.login div {
+  width: 100%;
+}
+
+.userid input{
+  border: 1px solid var(--box-border-color);
+  width: 100%;
+  padding: 20px; 
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+.password input {
+  border: 1px solid var(--box-border-color);
+  width: 100%;
+  padding: 20px; 
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.pwshow{
+  display: none;
+  position: absolute;
+  top: 250px;
+  left: 700px;
+  cursor: pointer;
+}
+
+.pwshow.active{
+  display: block;
+}
+
+
+
+
+.login-button button {
+  background-color: var(--btn-bg);
+  border: 1px solid var(--btn-bg);
+  color: white;
+  cursor: pointer;
+  width: 100%;
+}
+
+
+.fb-login {
+  display: flex;
+  flex-direction: column;
+}
+
+.fb-login div {
+  margin: 10px;
+}
+
+
+.section2 {
+  border: 1px solid var(--box-border-color);
+  padding: 20px 0;
+  width: 40%;
+  margin: 10px auto;
+  text-align: center;}
+
+.section3 {
+  border: 1px solid var(--box-border-color);
+  padding: 20px 0;
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section3 img {
+  width: 100px;
+}
+
+.section4 {
+  margin: 20px auto;
+  text-align: center;
+}
+
+
+.list a {
+  margin: 10px;
+}
+
