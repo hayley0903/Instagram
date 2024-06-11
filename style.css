@@ -18,7 +18,9 @@
   --txt-color: #d2d2d2;
 }
 
-
+body {
+  background-color: var(--body-bg);
+}
 
 a {
   color: var(--a-color);
@@ -27,13 +29,14 @@ a {
 .wrapper {
   background-color: var(--body-bg);
   color: var(--txt-color);
+  margin: 100px auto;
 }
 
 .section1 {
   padding: 20px 0;
   border: 1px solid var(--box-border-color);
   width: 40%;
-  margin: 50px auto 0 auto;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -76,16 +79,14 @@ a {
 .pwshow{
   display: none;
   position: absolute;
-  top: 250px;
-  left: 700px;
+  top: 340px;
+  left: 1000px;
   cursor: pointer;
 }
 
 .pwshow.active{
   display: block;
 }
-
-
 
 
 .login-button button {
@@ -100,10 +101,12 @@ a {
 .fb-login {
   display: flex;
   flex-direction: column;
+  
 }
 
 .fb-login div {
   margin: 10px;
+  color: var(--fb-color);
 }
 
 
@@ -134,5 +137,12 @@ a {
 
 .list a {
   margin: 10px;
+}
+
+.list button {
+  border:none;
+  outline: none;
+  background-color: transparent;
+  font-size: 16px;
 }
 

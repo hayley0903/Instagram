@@ -4,33 +4,32 @@ let pwShow = document.querySelector('.pwshow');
 
 
 
-pw.addEventListener('click', function(){
-    pwShow.classList.add('active');
-    if (pwShow.innerHTML = "비밀번호 표시"){
+pw.addEventListener('keyup', function(){
+  pwShow.classList.add('active');
+})
 
-      
-    } else {
+pwShow.addEventListener('click', function() {
+  if (pwShow.innerHTML = "비밀번호 표시") {
       pwShow.innerHTML = "숨기기";
       pwInput.type = 'text';
-    }
+  } 
 })
 
 
 
-
-
-
 let modeBtn = document.querySelector('.mode-btn');
-let wrapper = document.querySelector('.wrapper');
-let modeTxt = modeBtn.innerHTML;
+let count = 0;
 
 function modeToggle () {
-  if(modeTxt == 'Darkmode') {
-  modeTxt = "Lightmode";
-  wrapper.classList.add('dark');
+  let wrapper = document.querySelector('.wrapper');
+  let modeTxt = modeBtn.innerHTML;
+  count +=1;
+  if(count % 2 ==0) {
+  this.innerHTML = "Darkmode";
+  wrapper.classList.remove('dark');
   } else {
-    modeTxt = "Darkmode";
-    wrapper.classList.remove('dark');
+    this.innerHTML = "Lightmode";
+    wrapper.classList.add('dark');
   }
 }
 
