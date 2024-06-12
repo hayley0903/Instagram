@@ -79,16 +79,6 @@ a {
   position: relative;
 }
 
-.placeholder1 {
-  position: absolute;
-  top: 200px;
-  left: 300px;
-}
-
-.placeholder2 {
-  position: absolute;
-}
-
 
 .pwshow{
   display: none;

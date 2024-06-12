@@ -1,0 +1,263 @@
+:root {
+  --body-bg: #fafafa;
+  --box-bg: #fff;
+  --box-border-color: #dbdbdb;
+  --txt-color: #262626;
+  --txt-second-color: #8e8e8e;
+  --light-blue: #0095f6;
+  --dark-blue: #00376b;
+  --fb-color: #385185;
+}
+
+.dark {
+  --body-bg: #151515;
+  --box-bg: #353535;
+  --box-border-color: #666565;
+  --txt-color: #d2d2d2;
+}
+
+/* 전체 적용 스타일 */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {text-decoration: none;}
+
+li {list-style: none;}
+
+input, 
+button {
+  border: none;
+  outline: none; 
+  /* 클릭했을때 생기는 선을 없애주고 커서만 활성화 */
+  background-color: transparent;
+}
+
+.btn-blue {
+ background-color: var(--light-blue); 
+ width: 100%;
+ color: #fff;
+ padding: 10px 0;
+ border-radius: 8px;
+ font-weight: bold;
+ cursor: pointer;
+}
+
+body {
+  background-color: var(--body-bg);
+  color: var(--txt-color); }
+
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  /* viewport height */
+}
+
+.form-container {
+  width: 360px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.box {
+  width: 100%;
+  border: 1px solid var(--box-border-color);
+  border-radius: 4px;
+  text-align: center;
+  background-color: var(--body-bg);
+}
+
+.input-box {
+  padding: 40px;
+}
+
+.logo {
+  width: 175px;
+  height: 50px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.logo img {
+  width: 100%; 
+}
+
+
+.dark-logo {
+  display: none;
+}
+/* body에 dark 클래스가 있을 때 dark-logo 보이게 */
+body.dark .dark-logo {
+  display: block;
+}
+
+/* body에 dark 클래스가 있을 때 light-logo 안보이게 */
+body.dark .light-logo {
+  display: none;
+}
+
+.login-form {
+  margin-top: 40px;
+}
+
+.animate-input {
+  height: 36px;
+  border: 1px solid var(--box-border-color);
+  border-radius: 4px;
+  padding: 0 8px;
+  margin: 6px 0;
+  position: relative;
+}
+
+.animate-input.active {
+  padding: 4px 8px 0;
+}
+
+.animate-input.active span {
+  top:2px;
+  font-size: 10px;
+  transition: all 200ms ease-in-out;
+}
+
+.animate-input input {
+  width: 100%;
+  height: 100%;
+}
+
+.animate-input span {
+  position: absolute;
+  top:10px;
+  left:8px;
+  font-size: 12px;
+  color: var(--box-border-color);
+  pointer-events: none;
+}
+
+.animate-input button {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* body에 dark 클래스일때, 비밀번호 표시 색변경 */
+body.dark .animate-input button {
+  color: #fff;
+}
+
+.animate-input.active button {
+  display: inline;
+}
+
+/* 타입이 submit인 버튼 disabled 상태 일때 화면 */
+button[type="submit"]:disabled {
+  cursor: not-allowed;
+  background-color: rgba(0,149, 246, 0.3) ;
+}
+
+.or-box {
+  display: flex;
+  align-items: center;
+}
+
+/* odd: 홀수, even: 짝수 */
+.or-box div:nth-child(odd) {
+  flex-grow: 1;
+  height: 1px;
+  background-color: var(--box-border-color);
+}
+
+.or-box div:nth-child(even) {
+  margin: 30px 8px;
+  color: var(--txt-second-color);
+  font-weight: bold;
+}
+
+.fb-btn a { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fb-btn img{
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  margin-right: 8px;
+}
+
+.fb-btn span {
+  color: var(--fb-color);
+  font-weight: bold;
+}
+
+.forgot-pw {
+  /* display가 inline일때 상하 마진 설정해도 안먹힘 */
+  /* display를 block으로 바꿔줘야함 */
+  display: block;
+  margin-top: 22px;
+ font-size: 12px; 
+ color: var(--dark-blue);
+}
+
+body.dark .forgot-pw {
+  color: #fff;
+}
+
+.join-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+  padding: 16px 0;
+}
+
+.join-box span {
+  font-weight: 700;
+  color: var(--light-blue);
+}
+
+.app-txt {
+  margin: 30px 0;
+}
+
+.app-down img {
+  width: 136px;
+  height: 40px;
+  object-fit: contain;
+}
+
+footer {
+  text-align: center;
+}
+
+.footer-menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  /* 화면줄였을 때 */
+}
+
+
+.footer-menu-list a {
+  padding: 0 8px;
+  color: var(--txt-second-color);
+  font-size: 14px;
+}
+
+.copyright {
+  margin: 30px 0;
+  color: var(--txt-second-color);
+
+}
