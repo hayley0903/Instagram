@@ -1,7 +1,17 @@
+let id = document.querySelector('.userid');
+let idInput = document.querySelector('.id-input');
 let pw = document.querySelector('.password');
 let pwInput = document.querySelector('.password-input')
 let pwShow = document.querySelector('.pwshow');
 
+//id
+
+id.addEventListener('keyup', function(){
+  
+})
+
+
+//password
 
 pw.addEventListener('keyup', function(){
   pwShow.classList.add('active');
@@ -40,6 +50,8 @@ pwShow.addEventListener('click', pwClick);
 //pwshow.innerHTML 숨기기를 클릭햇을 떄 
 //pwshow.innerHTML이 비밀번호 표시로 변화
 
+
+//darkmode
 
 let modeBtn = document.querySelector('.mode-btn');
 let count = 0;

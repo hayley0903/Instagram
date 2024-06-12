@@ -50,3 +50,24 @@ function handleInput (e){
 
 userid.addEventListener('keyup', handleInput);
 userpw.addEventListener('keyup', handleInput);
+
+
+
+
+let modeBtn = document.querySelector('.mode-btn');
+let count = 0;
+
+function modeToggle () {
+  let body = document.querySelector('body');
+  let modeTxt = modeBtn.innerHTML;
+  count+=1;
+  if(count % 2 == 0){
+    this.innerHTML = "Darkmode";
+    body.classList.remove('dark');
+  } else {
+    this.innerHTML = "Lightmode";
+    body.classList.add('dark');
+  }
+}
+
+modeBtn.addEventListener('click', modeToggle);
