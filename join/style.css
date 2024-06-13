@@ -1,0 +1,202 @@
+:root {
+  --body-bg: #fafafa;
+  --box-bg: #fff;
+  --box-border-color: #dbdbdb;
+  --txt-color: #262626;
+  --txt-second-color: #8e8e8e;
+  --light-blue: #0095f6;
+  --dark-blue: #00376b;
+  --fb-color: #385185;
+}
+
+
+/* 전체 적용 스타일 */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {text-decoration: none;}
+
+li {list-style: none;}
+
+input, 
+button {
+  border: none;
+  outline: none; 
+  /* 클릭했을때 생기는 선을 없애주고 커서만 활성화 */
+  background-color: transparent;
+}
+
+
+.wrapper {
+  background-color: var(--body-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.form-container {
+  border: 2px solid var(--box-border-color);
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box {
+  padding: 20px 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo img {
+    margin-top: 50px;    
+    width: 175px;
+    height: 50px;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+.join-txt {
+  color: var(--txt-color);
+}
+
+.or-box {
+  display: flex;
+  align-items: center;
+}
+
+/* odd: 홀수, even: 짝수 */
+.or-box div:nth-child(odd) {
+  flex-grow: 1;
+  height: 1px;
+  background-color: var(--box-border-color);
+}
+
+.or-box div:nth-child(even) {
+  margin: 30px 8px;
+  color: var(--txt-second-color);
+  font-weight: bold;
+}
+
+
+
+.box a {
+  width: 100%;
+}
+
+.fb {
+  margin-top: 10px;
+  padding: 5px 20px;
+  background-color: var(--light-blue);
+  border-radius: 5px;
+  width: 70%;
+
+  text-align: center;
+}
+
+.fb img {width: 15px;
+}
+
+.fb button {
+  cursor: pointer;
+  color: #fff;
+}
+
+.animate-input {
+  position: relative;
+  margin: 13px 0;
+}
+
+
+.animate-input input{
+  width: 100%;
+  height: 30px;
+  border: 2px solid var(--box-border-color);
+  background-color: #f1f1f1;
+  border-radius: 5px;
+
+}
+
+.animate-input span {
+  color: var(--txt-second-color);
+  font-size: 12px;
+  position: absolute;
+  top: 5px;
+  left: 10px;
+
+}
+
+
+.info {
+  text-align: center;
+  font-size: 12px;
+
+}
+
+.submit-btn {
+  margin-top: 30px;
+  padding: 5px 20px;
+  background-color: var(--light-blue);
+  border-radius: 5px;
+  width: 100%;
+  text-align: center;
+}
+
+.submit-btn button {
+  color: #fff;
+}
+
+
+.login-box {
+  margin-top: 20px;
+  text-align: center;
+  padding: 20px 50px;
+  border: 2px solid var(--box-border-color);
+  width: 360px;
+  font-size: 14px;
+}
+
+
+.app-txt {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+
+.app-down {
+  display: flex;
+}
+
+.app-down img {
+  width: 150px;
+  margin: 10px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-menu-list li a {
+  margin-left: 10px;
+}
+
+.footer-last {
+  margin-top: 20px;
+  display: flex;
+
+}
