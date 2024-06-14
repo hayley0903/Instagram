@@ -108,9 +108,7 @@ function modeToggle () {
 
 // 삼항연산자
     // pwBtn.innerHTML = userPw.getAttribute('type', 'text')? '숨기기' : '비밀번호 표시';
-
 }
-
 
 
 pwBtn.addEventListener('click', modeToggle)
