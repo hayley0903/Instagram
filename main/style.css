@@ -47,13 +47,14 @@
   .wrapper {
     background-color: var(--body-bg);
     display: flex;
-    border: 2px solid yellow;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
   }
 
 
   .box {
-    border: 2px solid red;
-    width: 70%;
+    width: 900px;
     height: 1300px;
     display: flex;
     flex-direction: column;
@@ -66,17 +67,18 @@
     border: 2px solid var(--box-border-color);
     width: 500px;
     height: 600px;
+    margin-left: 300px;
   }
 
   .box2 {
     border: 2px solid var(--box-border-color);
     width: 500px;
     height: 600px;
+    margin-left: 300px;
   }
 
   .box-userid {
-    border: 2px solid blue;
-    width: 30%;
+    width: 300px;
     height: 300px;
     margin: 50px 100px 50px 0;
   }
@@ -99,10 +101,6 @@
     border-radius: 50%;
   }
 
-
-  .box-image {
-    border: 2px solid green;
-  }
 
   .box-image img {
     width: 490px;
@@ -168,4 +166,138 @@
     flex-grow:1;
   }
 
+  .box-userid {
+    width: 300px;
+    border: 2px solid var(--box-border-color);
+  }
   
+  .more-option-btn {
+    cursor: pointer;
+  } 
+
+
+  .more-option.active { 
+    transform: translate(0);
+
+  } 
+
+  .more-option {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: translate(-200%);
+  }
+
+  .more-option ul {
+    border-radius: 5%;
+  }
+
+  .more-option > ul {
+    width: 400px;
+
+    text-align: center;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .more-option ul li {
+    border-bottom: 1px solid lightgray;
+    padding: 12px 0;
+  }
+
+
+  .post-upload {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .post {
+    width: 370px;
+  }
+
+
+
+  .post-img {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+
+    margin: 20px 0;
+  }
+
+  .post img {
+    margin-top:100px;
+    width: 70px; 
+ }
+
+ .post div {
+  margin-bottom: 20px;
+ }
+
+.post-upload.active{
+  transform: translate(0);
+}
+
+.post-upload {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transform: translate(-200%);
+}
+
+.post {
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.title {
+  padding: 15px;
+}
+
+.file-input {
+  padding: 10px;
+  text-align: left;
+}
+
+.text-input {
+  width: 350px;
+  height: 100px;
+}
+
+
+.share-button {
+  padding: 10px 0;
+  width: 350px;
+  background-color: lightblue;
+  color: #fff;
+}
+
+.post-upload-close {
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+  font-size: 25px;
+  text-align: right;
+}
+
+  @media screen and (max-width : 1200px) {
+
+  .box-userid {
+    display: none;
+  }
+  }
+
